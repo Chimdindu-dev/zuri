@@ -5,7 +5,7 @@
   "main": "zuri.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "zuri.js"
+    "start": "node zuri.js"
   },
   "repository": {
     "type": "git",

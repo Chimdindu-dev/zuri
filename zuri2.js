@@ -25,7 +25,7 @@ const server = http.createServer(function(req, res){
         var result = num1*num2
     }else{
         var operation = "wronginpu";
-        var result = "wronginput"
+        var result = 0
     }
 
     let dataObj = {

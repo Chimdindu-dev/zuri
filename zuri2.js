@@ -1,7 +1,6 @@
 //json web server for zuri stage2
 
 const http = require("http");
-const { type } = require("os");
 var url = require('url');
 
 const server = http.createServer(function(req, res){
@@ -9,7 +8,8 @@ const server = http.createServer(function(req, res){
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.writeHead(200);
 
-    var sample = url.parse(req.url, true).query;
+    var sam = url.parse(req.url, true).query;
+    var sample = JSON.parse(sam);
     var num1 = sample.x;
     var num2 = sample.y;
 
@@ -21,10 +21,10 @@ const server = http.createServer(function(req, res){
         var result = num1-num2;
     }else if (sample.operation_type == 'multiplication'){
         var operation = "multiplication";
-        var result = num1*num2
+        var result = num1*num2;
     }else{
-        var operation = "wronginpu";
-        var result = 0
+        var operation = "wronginput";
+        var result = 0;
     }
 
     let dataObj = {

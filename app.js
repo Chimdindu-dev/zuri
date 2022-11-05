@@ -14,7 +14,7 @@ server.post("/", (req, res) => {
   const subtraction = ["minus","negative","smaller","less","remove","subtract","-","deficient","subtraction",];
   const multiplication = ["times", "*", "multiply", "multiplication"];
   let result;
-  const calculate = new Cal(x, y);
+  const calculate = new Calculator(x, y);
 
   if (addition.indexOf(operation_type) > -1) {
     result = calculate.add;
@@ -34,12 +34,12 @@ server.post("/", (req, res) => {
   }
 
   res.status(200).json({
-    operation_type: operation_type,
     slackUsername: "cchimdindu",
+    operation_type: operation_type,
     result: Number(result),
   });
 });
-class Cal {
+class Calculator {
   constructor(x, y) {
     this.x = x;
     this.y = y;

@@ -1,0 +1,20 @@
+{
+  "name": "zuristage2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zuri2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node zuri2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chimdindu-dev/zuri.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chimdindu-dev/zuri/issues"
+  },
+  "homepage": "https://github.com/Chimdindu-dev/zuri#readme"
+}

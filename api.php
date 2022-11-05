@@ -12,7 +12,7 @@
         $data = json_decode($json ,true);
 
 
-        $slackUsername="kekesmovic";
+        $slackUsername="cchimdindu";
         $operands= array('addition','subtraction','multiplication');
         $operation_type = (strtolower($_POST['operation_type']) ? strtolower($_POST['operation_type']) : strtolower($data['operation_type']));
         $x = ($_POST['x'] ? $_POST['x'] : $data['x']);

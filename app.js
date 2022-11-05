@@ -10,9 +10,42 @@ app.post("/", (req, res) => {
   console.log(req.body);
   let { operation_type, x, y } = req.body;
 
+  const myArray = operation_type.split(" ");
+
   const addition = ["add","top up","positive","join","plus","combine","+","sum","addition",];
   const subtraction = ["minus","negative","smaller","less","remove","subtract","-","deficient","subtraction",];
   const multiplication = ["times", "*", "multiply", "multiplication"];
+
+  let lenadd = addition.length;
+  let lensub = subtraction.length;
+  let lenmul = multiplication.length;
+  let lenarr = myArray.length;
+
+  for(var j=0;j<lenarr;j++){
+    for(var a=0;a<lenadd;a++){
+      if(myArray[j]==addition[a]){
+          operation_type == myArray[j];
+      }
+    }
+  }
+
+  for(var i=0;i<lenarr;i++){
+    for(var b=0;b<lensub;b++){
+      if(myArray[i]==subtraction[b]){
+          operation_type == myArray[i];
+      }
+    }
+  }
+
+  for(var k=0;k<lenarr;k++){
+    for(var c=0;c<lenmul;c++){
+      if(myArray[k]==multiplication[c]){
+          operation_type == myArray[k];
+      }
+    }
+  }
+
+  
   let result;
   const calculate = new Calculator(x, y);
 

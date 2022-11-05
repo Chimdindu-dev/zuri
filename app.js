@@ -1,12 +1,12 @@
 const cors = require("cors");
 const express = require("express");
-const server = express();
+const app = express();
 
-server.use(express.json());
-server.use(express.urlencoded({ extended: false }));
-server.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
-server.post("/", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
   let { operation_type, x, y } = req.body;
 
@@ -67,6 +67,6 @@ class Calculator {
   }
 }
 
-server.listen(process.env.PORT ||1234, function(){
+app.listen(process.env.PORT ||1234, function(){
     console.log("listening on port 1234");
 });

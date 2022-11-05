@@ -10,7 +10,6 @@ const server = http.createServer(function(req, res){
     res.writeHead(200);
 
     var sample = url.parse(req.url, true).query;
-    var operation = sample.operation-type;
     var num1 = sample.x;
     var num2 = sample.y;
 
@@ -30,7 +29,7 @@ const server = http.createServer(function(req, res){
 
     let dataObj = {
         "slackUsername":"cchimdindu", 
-        "operation-type":operation,
+        "operation_type":operation,
         "result":result,
     };
 

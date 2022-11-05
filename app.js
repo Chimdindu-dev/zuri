@@ -10,7 +10,7 @@ app.post("/", (req, res) => {
   console.log(req.body);
   let { operation_type, x, y } = req.body;
 
-  const tired = JSON.stringify(operation_type);
+  const tired = JSON.stringify(req.body.operation_type);
   const myArray = tired.split(" ");
 
   const addition = ["add","top up","positive","join","plus","combine","+","sum","addition",];

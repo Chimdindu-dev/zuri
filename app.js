@@ -24,10 +24,6 @@ app.post("/", (req, res) => {
     result = calculate.subtract;
     operation_type = "subtraction";
   }
-  if (division.indexOf(operation_type) > -1) {
-    result = calculate.divide;
-    operation_type = "division";
-  }
   if (multiplication.indexOf(operation_type) > -1) {
     result = calculate.multiply;
     operation_type = "multiplication";
